@@ -1,2 +1,4 @@
-# Boiler-Code
-Template/Boiler Code for Competative Programming Contest
+# Competative-Codeing
+Template Code for Competative Programming Contest.
+and 
+Sublime Text build commands.
