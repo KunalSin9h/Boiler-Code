@@ -29,7 +29,7 @@ set dir=~/.vim/swaps
 colorscheme desert
 
 "Compile and run
-autocmd filetype cpp nnoremap <F5> :w <bar> !g++ -std=c++14 -O2 -Wall % -o%:r --stack,268435456 && %:r.exe <CR>
+autocmd filetype cpp nnoremap <F5> :w <bar> !g++ -std=c++14 -O2 -Wall % -o%:r && %:r.exe <CR>
 
 "autocmd filetype cpp nnoremap <F9> :w <bar> !g++ -std=c++14 % -o %:r -Wl,--stack,268435456<CR>
 "autocmd filetype cpp nnoremap <F10> :!%:r<CR>
