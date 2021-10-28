@@ -25,16 +25,6 @@ inoremap {{ {
 inoremap {} {}
 "Esc to jj
 imap jj <Esc>
-"inoremap ( ()<Esc>i
-"inoremap { {}<Esc>i
-"inoremap {<CR> {<CR>}<Esc>O
-"inoremap [ []<Esc>i
-"inoremap < <><Esc>i
-"inoremap ' ''<Esc>i
-"inoremap " ""<Esc>i
-
-
-
 
 if has('gui_running')
 	set guifont=Consolas:h14
