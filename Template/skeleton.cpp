@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 using str = string;
+using ao = auto;
 
 typedef long long ll;
 typedef size_t st;
