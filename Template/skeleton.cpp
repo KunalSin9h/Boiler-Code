@@ -1,7 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 using str = string;
-using ao = auto;
 
 typedef long long ll;
 typedef size_t st;
@@ -10,6 +9,7 @@ typedef size_t st;
 #define S second
 #define pb push_back
 #define nl '\n'
+#define ao auto
 #define MOD (1000000007)
 #define PI (3.141592653589)
 #define all(x) begin(x), end(x)
