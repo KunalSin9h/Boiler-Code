@@ -29,6 +29,7 @@ inoremap {{ {
 inoremap {} {}
 inoremap "" ""
 inoremap () ()
+
 "Esc to jj
 imap jj <Esc>
 
@@ -48,6 +49,8 @@ colorscheme desert
 
 "Compile and run
 autocmd filetype cpp nnoremap <F5> :w <bar> !g++ -std=c++14 -O2 -Wall % -o %:r && %:r.exe <CR>
+autocmd filetype cpp nnoremap <F9> :w <bar> !g++ -std=c++14 % -o %:r -Wl,--stack,268435456<CR>
+autocmd filetype cpp nnoremap <F10> :!%:r<CR>
 
 " Plugin octol
 let g:cpp_class_scope_highlight = 1
@@ -59,3 +62,16 @@ let g:cpp_experimental_simple_template_highlight = 1
 " Plugin Airline
 let g:airline_theme='base16'
 
+
+" Plugin Syntastic
+ 
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_error_symbol = "✗"
+let g:syntastic_warning_symbol = "⚠"
