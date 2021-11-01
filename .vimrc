@@ -45,7 +45,15 @@ set nobackup
 "set loadplugins
 
 "colorscheme
-colorscheme desert 
+syntax enable
+if has('gui_running')
+    "set background=dark
+	colorscheme desert
+else
+    "set background=light
+	colorscheme gruvbox
+	
+endif
 
 "Compile and run
 autocmd filetype cpp nnoremap <F5> :w <bar> !g++ -std=c++14 -O2 -Wall % -o %:r && %:r.exe <CR>
