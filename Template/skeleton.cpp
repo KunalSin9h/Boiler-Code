@@ -3,6 +3,7 @@ using namespace std;
 using str = string;
 
 typedef long long ll;
+typedef unsigned long long ull;
 typedef size_t st;
 
 #define F first
