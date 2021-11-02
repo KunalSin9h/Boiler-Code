@@ -1,3 +1,7 @@
+if has('gui_running')
+	cd F:\
+endif
+
 "General Editor Setting
 set relativenumber
 set nu
@@ -15,12 +19,14 @@ set gfn=Consolas:h14
 set backspace=indent,eol,start
 syntax on
 set encoding=utf-8
-set signcolumn=yes
+"set signcolumn=yes
 set nocompatible
 set belloff=all
 
 "Append template to new C++ files
 autocmd BufNewFile *.cpp 0r ~/.vim/templates/skeleton.cpp
+"for small cpp code(fake file)
+autocmd BufNewFile *.C 0r ~/.vim/templates/quick.C
 
 " Keyblindings
 inoremap { {}<Left>
@@ -42,7 +48,6 @@ set noundofile
 set noswapfile
 set nobackup
 
-"set loadplugins
 
 "colorscheme
 syntax enable
@@ -72,14 +77,17 @@ let g:airline_theme='base16'
 
 
 " Plugin Syntastic
- 
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+if has('gui_running')
+	"don't do anything
+else
+	set statusline+=%#warningmsg#
+	set statusline+=%{SyntasticStatuslineFlag()}
+	set statusline+=%*
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_error_symbol = "✗"
+	let g:syntastic_always_populate_loc_list = 1
+	let g:syntastic_auto_loc_list = 1
+	let g:syntastic_check_on_open = 1
+	let g:syntastic_check_on_wq = 0
+	let g:syntastic_error_symbol = "✗"
 let g:syntastic_warning_symbol = "⚠"
+endif
