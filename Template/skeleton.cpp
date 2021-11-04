@@ -1,33 +1,50 @@
 #include <bits/stdc++.h>
 using namespace std;
 using str = string;
-
+//typedefs
 typedef long long ll;
 typedef unsigned long long ull;
-
-#define print(arr, n) FOR(n){cout << arr[i] << " ";} cout << nl;
-#define read(arr, n) FOR(n){cin >> arr[i];}
-#define FOR(n) for(int i=0;i<n;++i)
-#define iFOR(x, n) for(int i=x;i<n;++i)
+//pair
+#define pii pair<int, int>
+#define pss pair<str, str>
+//containers
+#define vi vector<int>
+#define si set<int>
+#define unsi unordered_set<int>
+#define vpi vector<pii>
+//loops
+#define F0(n) for(int i=0;i<n;++i)
+#define F1(n) for(int i=1;i<=n;++i)
+#define Fin(x, n) for(int i=x;i<=n; ++i) 
+#define print(arr, n) F0(n){cout << arr[i] << " ";} cout << nl;
+#define read(arr, n) F0(n){cin >> arr[i];}
+#define each(con) for(const ao &i:con)
+//methods
 #define F first
 #define S second
 #define pb push_back
+#define len(x) ((int)x.length())
+#define sz(x) ((int)x.size())
+#define all(x) begin(x), end(x)
+//others
+#define take(a) int a;cin>>a;
+#define end cout<<nl
 #define nl '\n'
 #define ao auto
 #define MOD (1000000007)
 #define PI (3.141592653589)
-#define all(x) begin(x), end(x)
+//debug
 #define deb(x) cout << "[ " << #x << " = " << x << " ]" << '\n'
-#define print(vec) for(auto i: vec){cout << i << " ";} cout << '\n'
-
+//-------------------------------------------------------------
 
 
 void solve(){
-    
+		
+	
 
 
 }
-
+//-------------------------------------------------------------
 int main(){
     ios_base::sync_with_stdio(false), cin.tie(NULL), cout.tie(NULL);
 
@@ -38,3 +55,4 @@ int main(){
     }
     return 0;
 }
+
