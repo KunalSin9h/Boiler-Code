@@ -15,15 +15,15 @@ typedef unsigned long long ull;
 //loops
 #define F0(n) for(int i=0;i<n;++i)
 #define F1(n) for(int i=1;i<=n;++i)
-#define Fin(x, n) for(int i=x;i<=n; ++i) 
+#define Fin(x, n) for(int i=x;i<=n;++i) 
+#define FOR(x, y) for(int x=0;x<y;++x)
 #define print(arr, n) F0(n){cout << arr[i] << " ";} cout << nl;
 #define read(arr, n) F0(n){cin >> arr[i];}
-#define each(con) for(const ao &i:con)
+#define each(con) for(ao &i:con)
 //methods
 #define F first
 #define S second
 #define pb push_back
-#define len(x) ((int)x.length())
 #define sz(x) ((int)x.size())
 #define all(x) begin(x), end(x)
 //others

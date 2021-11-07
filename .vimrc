@@ -1,7 +1,3 @@
-if has('gui_running')
-	cd F:\
-endif
-
 "General Editor Setting
 set relativenumber
 set nu
@@ -91,3 +87,5 @@ else
 	let g:syntastic_error_symbol = "✗"
 let g:syntastic_warning_symbol = "⚠"
 endif
+
+
