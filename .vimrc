@@ -89,3 +89,6 @@ let g:syntastic_warning_symbol = "⚠"
 endif
 
 
+"Cursor Style on diff mode(Insert & Normal)
+let &t_SI = "\e[6 q"
+let &t_EI = "\e[2 q"

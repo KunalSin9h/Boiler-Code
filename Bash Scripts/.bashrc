@@ -68,8 +68,6 @@ then
     done
 fi
 
-# remove stack size limit
-ulimit -s unlimited
 
 
 #Git status options
