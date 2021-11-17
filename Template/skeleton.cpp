@@ -9,9 +9,8 @@ typedef unsigned long long ull;
 #define pss pair<str, str>
 //containers
 #define vi vector<int>
-#define si set<int>
-#define unsi unordered_set<int>
-#define vpi vector<pii>
+#define vet<x> vector<x>
+#define unset<x> unordered_set<x>
 //loops
 #define F0(n) for(int i=0;i<n;++i)
 #define F1(n) for(int i=1;i<=n;++i)
@@ -19,7 +18,6 @@ typedef unsigned long long ull;
 #define FOR(x, y) for(int x=0;x<y;++x)
 #define print(arr, n) F0(n){cout << arr[i] << " ";} cout << nl;
 #define read(arr, n) F0(n){cin >> arr[i];}
-#define each(con) for(ao &i:con)
 //methods
 #define F first
 #define S second
@@ -28,9 +26,8 @@ typedef unsigned long long ull;
 #define all(x) begin(x), end(x)
 //others
 #define take(a) int a;cin>>a;
-#define end cout<<nl
+#define cut cout<<nl
 #define nl '\n'
-#define ao auto
 #define MOD (1000000007)
 #define PI (3.141592653589)
 //debug
