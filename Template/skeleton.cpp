@@ -9,8 +9,8 @@ typedef unsigned long long ull;
 #define pss pair<str, str>
 //containers
 #define vi vector<int>
-#define vet<x> vector<x>
-#define unset<x> unordered_set<x>
+#define vet(x) vector<x>
+#define unset(x) unordered_set<x>
 //loops
 #define F0(n) for(int i=0;i<n;++i)
 #define F1(n) for(int i=1;i<=n;++i)
