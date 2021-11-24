@@ -34,19 +34,18 @@ typedef unsigned long long ull;
 
 
 void solve(){
-	
-	
+
 
 
 }
 //-------------------------------------------------------------
 int main(){
-    ios_base::sync_with_stdio(false), cin.tie(NULL), cout.tie(NULL);
+    ios_base::sync_with_stdio(false), cin.tie(0), cout.tie(0);
 
     int Test = 1;
     cin >> Test;
-    while(Test--){
-        solve();
+    for(int tc = 1; tc <= Test; tc++){
+		solve();
     }
     return 0;
 }
