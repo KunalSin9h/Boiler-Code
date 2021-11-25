@@ -37,7 +37,7 @@ int main(){
     int Test = 1;
     cin >> Test;
 	for(int tc=1;tc<=Test;tc++){
-		cout<<"Case #"<<tc<<": ";
+		//cout<<"Case #"<<tc<<": ";
 		solve();
     }
     return 0;
