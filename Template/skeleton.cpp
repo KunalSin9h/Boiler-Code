@@ -29,7 +29,6 @@ typedef unsigned long long ull;
 void solve(){
 
 
-
 }
 //-------------------------------------------------------------
 int main(){
@@ -37,8 +36,8 @@ int main(){
 
     int Test = 1;
     cin >> Test;
-	F1(Test){
-		//cout << "Case #" << i << ": ";
+	for(int tc=1;tc<=Test;tc++){
+		cout<<"Case #"<<tc<<": ";
 		solve();
     }
     return 0;
