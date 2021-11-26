@@ -13,8 +13,8 @@ typedef unsigned long long ull;
 #define FOR(x, y) for(int x=0;x<y;++x)
 #define print(arr, n) F0(n){cout << arr[i] << " ";} cout << nl;
 #define read(arr, n) F0(n){cin >> arr[i];}
-#define f first
-#define s second
+#define F first
+#define S second
 #define pb push_back
 #define sz(x) ((int)x.size())
 #define all(x) begin(x), end(x)
@@ -22,11 +22,12 @@ typedef unsigned long long ull;
 #define nl '\n'
 #define MOD (1000000007)
 #define PI (3.141592653589)
-#define deb(x) cout << "[ " << #x << " = " << x << " ]" << '\n'
+#define dbg(x) cout << "--" << __LINE__ << "--" << "[ " << #x << " = " << x << " ]" << '\n'; 
 //-------------------------------------------------------------
 
 
 void solve(){
+
 
 
 }
