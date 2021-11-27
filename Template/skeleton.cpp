@@ -18,11 +18,12 @@ typedef unsigned long long ull;
 #define pb push_back
 #define sz(x) ((int)x.size())
 #define all(x) begin(x), end(x)
+#define popcount(x)     __builtin_popcountll(x)
 #define ter cout<<nl
 #define nl '\n'
 #define MOD (1000000007)
 #define PI (3.141592653589)
-#define dbg(x) cout << "--" << __LINE__ << "--" << "[ " << #x << " = " << x << " ]" << '\n'; 
+#define deb(x) cout << "--" << __LINE__ << "--" << "[ " << #x << " = " << x << " ]" << '\n'; 
 //-------------------------------------------------------------
 
 
