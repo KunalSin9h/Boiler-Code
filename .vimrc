@@ -22,7 +22,7 @@ set belloff=all
 "Append template to new C++ files
 autocmd BufNewFile *.cpp 0r ~/.vim/templates/skeleton.cpp
 "for small cpp code(fake file)
-autocmd BufNewFile *.C 0r ~/.vim/templates/quick.C
+autocmd BufNewFile *.c 0r ~/.vim/templates/quick.c
 
 " Keyblindings
 inoremap { {}<Left>
@@ -57,8 +57,8 @@ else
 endif
 
 "Compile and run
-autocmd filetype cpp nnoremap <F5> :w <bar> !g++ -std=c++14 -O2 -Wall % -o %:r && %:r.exe <CR>
-autocmd filetype cpp nnoremap <F9> :w <bar> !g++ -std=c++14 % -o %:r -Wl,--stack,268435456<CR>
+autocmd filetype cpp nnoremap <F5> :w <bar> !g++ -std=c++17 -O2 -Wall % -o %:r && %:r.exe <CR>
+autocmd filetype cpp nnoremap <F9> :w <bar> !g++ -std=c++17 % -o %:r -Wl,--stack,268435456<CR>
 autocmd filetype cpp nnoremap <F10> :!%:r<CR>
 
 " Plugin octol
