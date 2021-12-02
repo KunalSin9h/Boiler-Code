@@ -16,15 +16,13 @@ typedef unsigned long long ull;
 #define unset unordered_set
 #define unmap unordered_map
 
-#define F0(n) for(int i =0;i<n; ++i)
-#define F1(n) for(int i =1;i<=n; ++i)
 #define FOR(i, a, b) for (int i=a; i<(b); i++)
 #define F0R(i, a) for (int i=0; i<(a); i++)
 #define FORd(i,a,b) for (int i = (b)-1; i >= a; i--)
 #define F0Rd(i,a) for (int i = (a)-1; i >= 0; i--)
 #define trav(a,x) for (auto& a : x)
-#define print(arr, n) for(int i=0;i<n; ++i){cout << arr[i] << " ";} cout << nl;
-#define read(arr, n) for(int i=0i<n; ++i){cin >> arr[i];}
+#define print(arr, n) for(int i=0;i<n;++i){cout << arr[i] << " ";} cout << nl;
+#define read(arr, n) for(int i=0;i<n;++i){cin >> arr[i];}
 
 #define f first
 #define s second
@@ -36,7 +34,6 @@ typedef unsigned long long ull;
 #define nl '\n'
 #define MOD (1000000007)
 #define PI (3.141592653589)
-#define deb(x) cout << "--" << __LINE__ << "--" << "[ " << #x << " = " << x << " ]" << '\n'; 
 
 template<class T> bool ckmin(T& a, const T& b) { return b < a ? a = b, 1 : 0; }
 template<class T> bool ckmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; }
@@ -64,7 +61,7 @@ template <typename T, typename... V>
 void _print(T t, V... v) {__print(t); if (sizeof...(v)) cerr << ", "; _print(v...);}
 
 #ifdef DEBUG
-#define dbg(x...) cerr << "\e[91m"<<__func__<<":"<<__LINE__<<" [" << #x << "] = ["; _print(x); cerr << "\e[39m" << endl;
+#define dbg(x...) cerr << "  "<<__func__<<":"<<__LINE__<<" [" << #x << "] = ["; _print(x);
 #else
 #define dbg(x...)
 #endif
@@ -72,7 +69,8 @@ void _print(T t, V... v) {__print(t); if (sizeof...(v)) cerr << ", "; _print(v..
 
 
 void solve(){
-	
+
+
 
 }
 
