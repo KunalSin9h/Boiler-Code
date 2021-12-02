@@ -19,6 +19,9 @@ set encoding=utf-8
 set nocompatible
 set belloff=all
 
+"Set Shell
+set shell=C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe
+
 "Append template to new C++ files
 autocmd BufNewFile *.cpp 0r ~/.vim/templates/skeleton.cpp
 "for small cpp code(fake file)
@@ -57,9 +60,9 @@ else
 endif
 
 "Compile and run
-autocmd filetype cpp nnoremap <F5> :w <bar> !g++ -std=c++17 -O2 -Wall % -o %:r && %:r.exe <CR> 
-autocmd filetype cpp nnoremap <F9> :w <bar> !g++ -std=c++17 -DDEBUG -O2 -Wall % -o %:r && %:r.exe <CR> 
-autocmd filetype cpp nnoremap <F10> :!%:r<CR>
+autocmd filetype cpp nnoremap <F5> :w <bar> !g++ -std=c++17 -O2 -Wall % -o %:r<CR> 
+autocmd filetype cpp nnoremap <F9> :w <bar> !g++ -std=c++17 -DDEBUG -O2 -Wall % -o %:r<CR> 
+autocmd filetype cpp nnoremap <F10> :!./%:r.exe<CR>
 
 " Plugin octol
 let g:cpp_class_scope_highlight = 1
