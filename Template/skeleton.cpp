@@ -1,6 +1,4 @@
-#include "bits/stdc++.h"
-#pragma GCC optimize ("O3")
-#pragma GCC target ("sse4")
+#include <bits/stdc++.h>
 
 using namespace std;
 
