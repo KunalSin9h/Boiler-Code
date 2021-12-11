@@ -4,7 +4,13 @@ using namespace std;
 
 using str = string;
 typedef long long ll;
+typedef long double db;
 typedef unsigned long long ull;
+
+const clock_t beg = clock();
+const int MOD = 1000000007;
+const db PI = acos((db)-1);
+constexpr int pct(int x){return __builtin_popcount(x);}
 
 #define pi pair<int, int>
 #define pl pair<ll, ll> 
@@ -27,15 +33,13 @@ typedef unsigned long long ull;
 #define pb push_back
 #define sz(x) ((int)x.size())
 #define all(x) begin(x), end(x)
-#define popcount(x)     __builtin_popcountll(x)
 #define ter cout<<nl
 #define nl '\n'
-#define MOD (1000000007)
-#define PI (3.141592653589)
 
-template<class T> bool ckmin(T& a, const T& b) { return b < a ? a = b, 1 : 0; }
-template<class T> bool ckmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; }
+template<class T> bool ckmin(T& a, const T& b) { return b < a ? a = b, 1 : 0; } // set a = min(a, b)
+template<class T> bool ckmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; } // set a = max(a, b)
 
+// DEBUG 
 void __print(int x) {cerr << x;}
 void __print(long x) {cerr << x;}
 void __print(long long x) {cerr << x;}
@@ -59,9 +63,11 @@ template <typename T, typename... V>
 void _print(T t, V... v) {__print(t); if (sizeof...(v)) cerr << ", "; _print(v...);}
 
 #ifdef DEBUG
-#define dbg(x...) cerr << "  "<<__func__<<":"<<__LINE__<<" [" << #x << "] = ["; _print(x);
+#define dbg(x...) cerr << "   "<<__func__<<": "<<__LINE__<<" [" << #x << "] = ["; _print(x)
+#define dbg_time() cerr << "   " << "Time: " << __LINE__ << " = [ " << ((db)(clock()-beg)/CLOCKS_PER_SEC)  << " ]"<< endl;
 #else
 #define dbg(x...)
+#define dbg_time()
 #endif
 
 
@@ -69,19 +75,14 @@ void _print(T t, V... v) {__print(t); if (sizeof...(v)) cerr << ", "; _print(v..
 void solve(){
 
 
-
 }
 
 int main(){
-    ios_base::sync_with_stdio(false), cin.tie(0);
+    cin.tie(0)->sync_with_stdio(0);
+    //cin.exceptions(cin.failbit);
 
     int Test = 1;
     cin >> Test;
-	for(int tc=1;tc<=Test;tc++){
-		//cout<<"Case #"<<tc<<": ";
-		solve();
-    }
+    while(Test--){solve();}
     return 0;
 }
-
-
