@@ -39,7 +39,6 @@ constexpr int pct(int x){return __builtin_popcount(x);}
 template<class T> bool ckmin(T& a, const T& b) { return b < a ? a = b, 1 : 0; } // set a = min(a, b)
 template<class T> bool ckmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; } // set a = max(a, b)
 
-// DEBUG 
 void __print(int x) {cerr << x;}
 void __print(long x) {cerr << x;}
 void __print(long long x) {cerr << x;}
