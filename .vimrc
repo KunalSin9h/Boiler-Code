@@ -21,8 +21,6 @@ set belloff=all
 
 "Append template to new C++ files
 autocmd BufNewFile *.cpp 0r ~/.vim/templates/skeleton.cpp
-"for small cpp code(fake file)
-autocmd BufNewFile *.c 0r ~/.vim/templates/quick.c
 
 " Keyblindings
 inoremap { {}<Left>
