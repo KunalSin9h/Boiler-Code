@@ -1,21 +1,19 @@
 #include <bits/stdc++.h>
-
+#pragma GCC optimize ("Ofast")
 using namespace std;
 
 using str = string;
 typedef long long ll;
 typedef long double db;
 typedef unsigned long long ull;
+typedef pair<int, int> pi;
+typedef vector<int> vi;
 
 const clock_t beg = clock();
-const int MOD = 1000000007;
+const int mod = 1000000007;
 const db PI = acos((db)-1);
 constexpr int pct(int x){return __builtin_popcount(x);}
 
-#define pi pair<int, int>
-#define pl pair<ll, ll> 
-
-#define vi vector<int>
 #define vt vector
 #define unset unordered_set
 #define unmap unordered_map
@@ -39,7 +37,6 @@ constexpr int pct(int x){return __builtin_popcount(x);}
 template<class T> bool ckmin(T& a, const T& b) { return b < a ? a = b, 1 : 0; } // set a = min(a, b)
 template<class T> bool ckmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; } // set a = max(a, b)
 
-// DEBUG 
 void __print(int x) {cerr << x;}
 void __print(long x) {cerr << x;}
 void __print(long long x) {cerr << x;}
@@ -61,7 +58,6 @@ void __print(const T &x) {int f = 0; cerr << '{'; for (auto &i: x) cerr << (f++ 
 void _print() {cerr << "]\n";}
 template <typename T, typename... V>
 void _print(T t, V... v) {__print(t); if (sizeof...(v)) cerr << ", "; _print(v...);}
-
 #ifdef DEBUG
 #define dbg(x...) cerr << "   "<<__func__<<": "<<__LINE__<<" [" << #x << "] = ["; _print(x)
 #define dbg_time() cerr << "   " << "Time: " << __LINE__ << " = [ " << ((db)(clock()-beg)/CLOCKS_PER_SEC)  << " ]"<< endl;
@@ -79,7 +75,7 @@ void solve(){
 
 int main(){
     cin.tie(0)->sync_with_stdio(0);
-    //cin.exceptions(cin.failbit);
+    cin.exceptions(cin.failbit);
 
     int Test = 1;
     cin >> Test;
