@@ -10,7 +10,6 @@ typedef pair<int, int> pi;
 typedef vector<int> vi;
 
 const clock_t beg = clock();
-const int mod = 1000000007;
 const db PI = acos((db)-1);
 constexpr int pct(int x){return __builtin_popcount(x);}
 
@@ -18,13 +17,11 @@ constexpr int pct(int x){return __builtin_popcount(x);}
 #define unset unordered_set
 #define unmap unordered_map
 
-#define FOR(i, a, b) for (int i=a; i<(b); i++)
-#define F0R(i, a) for (int i=0; i<(a); i++)
-#define FORd(i,a,b) for (int i = (b)-1; i >= a; i--)
-#define F0Rd(i,a) for (int i = (a)-1; i >= 0; i--)
-#define trav(a,x) for (auto& a : x)
+#define F0(n) for(int i = 0;i<n; ++i)
+#define F1(n) for(int i = 1;i<=n; ++i)
 #define print(arr, n) for(int i=0;i<n;++i){cout << arr[i] << " ";} cout << nl;
 #define read(arr, n) for(int i=0;i<n;++i){cin >> arr[i];}
+#define trav(i, n) for(auto &i: n)
 
 #define f first
 #define s second
@@ -66,6 +63,7 @@ void _print(T t, V... v) {__print(t); if (sizeof...(v)) cerr << ", "; _print(v..
 #define dbg_time()
 #endif
 
+const int mod = 1000000007;
 
 
 void solve(){
