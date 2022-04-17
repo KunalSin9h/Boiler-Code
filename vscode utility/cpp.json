@@ -1,0 +1,77 @@
+{
+	// Place your snippets for cpp here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	"Cpp Template": {
+		"prefix": "cpp",
+		"body": [
+			"#include \"bits/stdc++.h\"",
+			"using namespace std;\n",
+			"int main(){",
+			"\tcin.tie(0)->sync_with_stdio(0);",
+			"\t$1",
+			"\treturn 0;",
+			"}",
+		],
+		"description": "CPP Snippet Code"
+	},
+	"Random Number Generator": {
+		"prefix": "r0",
+		"body": [
+			"mt19937 rng((unsigned int) chrono::steady_clock::now().time_since_epoch().count());",
+		],
+		"description": "mt19937"
+	},
+	"Time": {
+		"prefix": "c_t",
+		"body": [
+			"cerr << (((float)clock()-beg)/CLOCKS_PER_SEC) << endl;"
+		],
+		"description": "time"
+	},
+	"debug": {
+		"prefix": "d0",
+		"body": [
+			"#ifndef LOCAL",
+			"#define dbg(x...)",
+			"#endif",
+		],
+		"description": "Debug code"
+	},
+	"algo": {
+		"prefix": "a0",
+		"body": [
+			"${1:sort}($2.begin(), $2.end());",
+		],
+		"description": "put .begin(), and .end()"
+	},
+	"Test Case": {
+		"prefix": "t0",
+		"body": [
+			"int T;cin >> T;",
+			"while(T--){",
+			"\t$1",
+			"}",
+		],
+		"description": "Test Case"
+	},
+	"Case number Test Case":{
+		"prefix": "tn0",
+		"body": [
+			"int Test;cin >> Test;",
+			"for(int Test_num = 1; Test_num <= Test; Test_num++){\n",
+			"\t${1:// Don't forget to remove $ with ans}\n",
+			"\tcout << \"Case #\" << Test_num << \": \" << '$' << '\\n';",
+			"}",
+		],
+		"description": "Test Case With case number"
+	},
+	"print to consol":{
+		"prefix": "c0",
+		"body": [
+			"cout << $1 << '\\n';",
+		],
+	}
+}
