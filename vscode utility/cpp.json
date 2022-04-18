@@ -51,8 +51,8 @@
 		"prefix": "t0",
 		"body": [
 			"int T;cin >> T;",
-			"while(T--){",
-			"\t$1",
+			"while(T--){\n",
+			"\t$1\n",
 			"}",
 		],
 		"description": "Test Case"
@@ -62,8 +62,8 @@
 		"body": [
 			"int Test;cin >> Test;",
 			"for(int Test_num = 1; Test_num <= Test; Test_num++){\n",
-			"\t${1:// Don't forget to remove $ with ans}\n",
-			"\tcout << \"Case #\" << Test_num << \": \" << '$' << '\\n';",
+			"\t$1\n",
+			"\tcout << \"Case #\" << Test_num << \": \";",
 			"}",
 		],
 		"description": "Test Case With case number"
