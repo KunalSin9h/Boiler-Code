@@ -25,7 +25,7 @@
 		"description": "mt19937"
 	},
 	"Time": {
-		"prefix": "c_t",
+		"prefix": "t0",
 		"body": [
 			"cerr << (((float)clock()-beg)/CLOCKS_PER_SEC) << endl;"
 		],
@@ -40,25 +40,8 @@
 		],
 		"description": "Debug code"
 	},
-	"algo": {
-		"prefix": "a0",
-		"body": [
-			"${1:sort}($2.begin(), $2.end());",
-		],
-		"description": "put .begin(), and .end()"
-	},
-	"Test Case": {
-		"prefix": "t0",
-		"body": [
-			"int T;cin >> T;",
-			"while(T--){\n",
-			"\t$1\n",
-			"}",
-		],
-		"description": "Test Case"
-	},
 	"Case number Test Case":{
-		"prefix": "tn0",
+		"prefix": "google",
 		"body": [
 			"int Test;cin >> Test;",
 			"for(int Test_num = 1; Test_num <= Test; Test_num++){\n",
@@ -68,10 +51,4 @@
 		],
 		"description": "Test Case With case number"
 	},
-	"print to consol":{
-		"prefix": "c0",
-		"body": [
-			"cout << $1 << '\\n';",
-		],
-	}
 }
