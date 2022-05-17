@@ -10,3 +10,7 @@ Utility tools for Competative Programming
 3 > vimrc file
 
 4 > bashrc file
+
+5 > batch file
+
+6 > bash scripts

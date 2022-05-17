@@ -12,15 +12,15 @@ for((i = 1; i <= $4 ; ++i)); do
 	./$2 < input > slow_output
 
 	if !(cmp -s "wrong_output" "slow_output")
-	then
-		echo -e "${RED}Error Found!${NC}"
-		echo "input (${3}) :"
-		cat input
-		echo -e "${CYAN}Wrong Output (${1}):${NC}"
-		cat wrong_output
-		echo -e "${YELLOW}Slow Output (${2}):${NC}"
-		cat slow_output
-		exit		
+		then
+			echo -e "${RED}Error Found!${NC}"
+			echo "input (${3}) :"
+			cat input
+			echo -e "${CYAN}Wrong Output (${1}):${NC}"
+			cat wrong_output
+			echo -e "${YELLOW}Slow Output (${2}):${NC}"
+			cat slow_output
+			exit		
 	fi
 done
 echo -e "\n${GREEN}Passed ${4} Tests${NC}\n"

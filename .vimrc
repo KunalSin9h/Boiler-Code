@@ -1,29 +1,34 @@
 "General Editor Setting
+
 set relativenumber
 set nu
 set nohlsearch
 set noerrorbells
-set tabstop=4 softtabstop=4
+
+set tabstop=4
 set shiftwidth=4
+set softtabstop=4
+set expandtab
+set cindent  
 set smartindent
+
 set nowrap
 set incsearch
 set scrolloff=6
-set ai
-set hls
-set gfn=Consolas:h14
 set backspace=indent,eol,start
 syntax on
 set encoding=utf-8
-"set signcolumn=yes
 set nocompatible
 set belloff=all
+set signcolumn=yes
 
-"Append template to new C++ files
-autocmd BufNewFile *.cpp 0r ~/.vim/templates/skeleton.cpp
+"Cursor Style on diff mode(Insert & Normal)
+let &t_SI = "\e[6 q"
+let &t_EI = "\e[2 q"
 
 " Keyblindings
 inoremap { {}<Left>
+
 inoremap {<CR> {<CR>}<Esc>O
 inoremap {{ {
 inoremap {} {}
@@ -33,60 +38,82 @@ inoremap () ()
 "Esc to jj
 imap jj <Esc>
 
-if has('gui_running')
-	set guifont=Consolas:h14
-endif
-
 "Extra file
 set noundofile
 set noswapfile
 set nobackup
 
+"Remember folds
+augroup remember_folds
+  autocmd!
+  autocmd BufWinLeave * mkview
+  autocmd BufWinEnter * silent! loadview
+augroup END
 
-"colorscheme
-syntax enable
-if has('gui_running')
-    "set background=dark
-	colorscheme desert
-else
-    "set background=light
-	colorscheme gruvbox
-	
-endif
+"let g:solarized_termcolors=256
+set background=dark
+"colorscheme solarized
+"colorscheme zenburn
+colorscheme gruvbox
 
-"Compile and run
-autocmd filetype cpp nnoremap <F5> :w <bar> !g++ -std=c++17 -O2 -Wall % -o %:r && %:r.exe<CR> 
-autocmd filetype cpp nnoremap <F9> :w <bar> !g++ -std=c++17 -DDEBUG -O2 -Wall % -o %:r && %:r.exe<CR> 
-autocmd filetype cpp nnoremap <F10> :!%:r<CR>
+"Append template to new C++ files
+autocmd BufNewFile *.cpp 0r ~/.vim/templates/skeleton.cpp
 
-" Plugin octol
-let g:cpp_class_scope_highlight = 1
-let g:cpp_member_variable_highlight = 1
-let g:cpp_class_decl_highlight = 1
-let g:cpp_posix_standard = 1
-let g:cpp_experimental_simple_template_highlight = 1
+set nocompatible              " be iMproved, required
+filetype off                  " required
 
-" Plugin Airline
-let g:airline_theme='base16'
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
 
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
 
-" Plugin Syntastic
-if has('gui_running')
-	"don't do anything
-else
-	set statusline+=%#warningmsg#
-	set statusline+=%{SyntasticStatuslineFlag()}
-	set statusline+=%*
+" The following are examples of different formats supported.
+" Keep Plugin commands between vundle#begin/end.
+" plugin on GitHub repo
+Plugin 'tpope/vim-fugitive'
+" plugin from http://vim-scripts.org/vim/scripts.html
+" Plugin 'L9'
+" Git plugin not hosted on GitHub
+Plugin 'git://git.wincent.com/command-t.git'
+" git repos on your local machine (i.e. when working on your own plugin)
+Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+" Install L9 and avoid a Naming conflict if you've already installed a
+" different version somewhere else.
+" Plugin 'ascenator/L9', {'name': 'newL9'}
 
-	let g:syntastic_always_populate_loc_list = 1
-	let g:syntastic_auto_loc_list = 1
-	let g:syntastic_check_on_open = 1
-	let g:syntastic_check_on_wq = 0
-	let g:syntastic_error_symbol = "✗"
-	let g:syntastic_warning_symbol = "⚠"
-endif
+" YCM for auto code completation
+Plugin 'Valloric/YouCompleteMe'
 
+" Syntastic for errors
+Plugin 'scrooloose/syntastic'
 
-"Cursor Style on diff mode(Insert & Normal)
-let &t_SI = "\e[6 q"
-let &t_EI = "\e[2 q"
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+set completeopt-=preview
+"let g:ycm_autoclose_preview_window_after_insertion = 1
