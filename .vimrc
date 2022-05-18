@@ -55,6 +55,8 @@ set background=dark
 "colorscheme solarized
 "colorscheme zenburn
 colorscheme gruvbox
+"colorscheme onehalfdark
+"colorscheme onehalflight
 
 "Append template to new C++ files
 autocmd BufNewFile *.cpp 0r ~/.vim/templates/skeleton.cpp
@@ -91,6 +93,9 @@ Plugin 'Valloric/YouCompleteMe'
 " Syntastic for errors
 Plugin 'scrooloose/syntastic'
 
+"Vim -Dispatch
+Plugin 'tpope/vim-dispatch'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -115,5 +120,15 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
+"Disable new window popin when YouCompleteMe suggest something
 set completeopt-=preview
-"let g:ycm_autoclose_preview_window_after_insertion = 1
+
+"General shotcut for compiling and running
+set makeprg=cp.sh\ %:r
+autocmd filetype cpp nnoremap <F5> :w <bar> Make <CR> 
+autocmd filetype cpp nnoremap <F6> :vertical terminal ++shell ++cols=40 ./%:r<CR>
+autocmd filetype cpp nnoremap <F8> :!./%:r<CR>
+
+"CodeForces specific
+nnoremap <F9> :vertical terminal ++shell ++cols=40 cf test<CR>
+nnoremap <F12> :vertical terminal ++shell ++cols=40 cf submit<CR>
