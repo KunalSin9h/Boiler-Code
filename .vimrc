@@ -132,3 +132,6 @@ autocmd filetype cpp nnoremap <F8> :!./%:r<CR>
 "CodeForces specific
 nnoremap <F9> :vertical terminal ++shell ++cols=40 cf test<CR>
 nnoremap <F12> :vertical terminal ++shell ++cols=40 cf submit<CR>
+
+"vim utility
+nnoremap <F2> :q <CR>
