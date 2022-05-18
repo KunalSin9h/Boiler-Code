@@ -11,7 +11,7 @@ alias ls='ls -F --color=auto --show-control-chars'
 alias ll='ls -l'
 alias rm='rm -iv'
 
-#colorscheme gruvbox
+"colorscheme gruvbox
 
 # Prompt style
 if test -f /etc/profile.d/git-sdk.sh
