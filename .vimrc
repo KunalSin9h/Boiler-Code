@@ -75,8 +75,9 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-dispatch'
-"Plugin 'lervag/vimtex'
 Plugin 'octol/vim-cpp-enhanced-highlight'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -94,6 +95,7 @@ let g:syntastic_check_on_wq = 0
 set completeopt-=preview
 
 "General shotcut for compiling and running
+" you need cp.sh in computer to work 
 set makeprg=cp.sh\ %:r
 autocmd filetype cpp nnoremap <F5> :w <bar> Make <CR> 
 autocmd filetype cpp nnoremap <F6> :vertical terminal ++shell ++cols=40 ./%:r<CR>
@@ -104,16 +106,8 @@ nnoremap <F9> :vertical terminal ++shell ++cols=40 cf test<CR>
 nnoremap <F12> :vertical terminal ++shell ++cols=40 cf submit<CR>
 
 "vim utility
+" :q with <F2>
 nnoremap <F2> :q <CR>
-
-"vimtex
-"let g:vimtex_view_general_viewer = 'SumatraPDF'
-"let g:vimtex_view_general_options = '-reuse-instance @pdf'
-"let g:vimtex_view_general_options_latexmk = '-reuse-instance'
-"let g:tex_flavor = 'latex'
-"let g:vimtex_motion_matchparen = 0
-"let g:vimtex_fold_manual = 1
-"let g:vimtex_matchparen_enabled = 0
 
 "c++ highlighting
 let g:cpp_class_scope_highlight = 1
@@ -123,3 +117,9 @@ let g:cpp_posix_standard = 1
 let g:cpp_experimental_template_highlight = 1
 let g:cpp_concepts_highlight = 1
 let g:cpp_no_function_highlight = 1
+
+"vim - snippet (ultisnip)  Trigger Key -> ctrl + u
+let g:UltiSnipsExpandTrigger="<c-u>"
+let g:UltiSnipsJumpForwardTrigger="<c-u>"
+let g:UltiSnipsJumpBackwardTrigger="<c-u>"
+let g:UltiSnipsEditSplit="vertical"
