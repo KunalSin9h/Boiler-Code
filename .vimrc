@@ -1,5 +1,4 @@
 "General Editor Setting
-
 set autoread                    " Auto reload file after external commandset relativenumber
 set binary                      " Enable binary support
 set number                      " Show line numbers
@@ -27,7 +26,7 @@ syntax on
 set encoding=utf-8
 set nocompatible
 set belloff=all
-set signcolumn=yes
+set signcolumn=number
 
 "Cursor Style on diff mode(Insert & Normal)
 let &t_SI = "\e[6 q"
