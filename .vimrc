@@ -1,7 +1,14 @@
 "General Editor Setting
 
-set relativenumber
-set nu
+set autoread                    " Auto reload file after external commandset relativenumber
+set binary                      " Enable binary support
+set number                      " Show line numbers
+set ttyfast                     " Fast terminal
+
+" Move between open buffers
+nnoremap <C-n> :bnext<CR>
+nnoremap <C-p> :bprev<CR>
+
 set nohlsearch
 set noerrorbells
 
@@ -25,15 +32,6 @@ set signcolumn=yes
 "Cursor Style on diff mode(Insert & Normal)
 let &t_SI = "\e[6 q"
 let &t_EI = "\e[2 q"
-
-" Keyblindings
-inoremap { {}<Left>
-
-inoremap {<CR> {<CR>}<Esc>O
-inoremap {{ {
-inoremap {} {}
-inoremap "" ""
-inoremap () ()
 
 "Esc to jj
 imap jj <Esc>
@@ -73,23 +71,15 @@ Plugin 'git://git.wincent.com/command-t.git'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-dispatch'
 Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
+Plugin 'bling/vim-bufferline' "show the list of buffers in the command bar
+Plugin 'delimitMate.vim' "completion for quotes, parens, brackets
 
 call vundle#end()            " required
 filetype plugin indent on    " required
-
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
 
 "Disable new window popin when YouCompleteMe suggest something
 set completeopt-=preview
