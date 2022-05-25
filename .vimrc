@@ -34,6 +34,7 @@ let &t_EI = "\e[2 q"
 
 "Esc to jj
 imap jj <Esc>
+inoremap {<CR> {<CR>}<Esc>O
 
 "Extra file
 set noundofile
