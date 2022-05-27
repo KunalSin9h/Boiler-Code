@@ -8,6 +8,8 @@ set ttyfast                     " Fast terminal
 nnoremap <C-n> :bnext<CR>
 nnoremap <C-p> :bprev<CR>
 
+syntax on
+
 set nohlsearch
 set noerrorbells
 
@@ -22,11 +24,16 @@ set nowrap
 set incsearch
 set scrolloff=6
 set backspace=indent,eol,start
-syntax on
 set encoding=utf-8
 set nocompatible
 set belloff=all
 set signcolumn=number
+
+set mouse=a             "mouse support
+set title               "File title
+set ttimeoutlen=0       "time to run command
+set wildmenu            "adv. menu for auto-comp.
+set splitbelow splitright
 
 "Cursor Style on diff mode(Insert & Normal)
 let &t_SI = "\e[6 q"
@@ -34,7 +41,7 @@ let &t_EI = "\e[2 q"
 
 "Esc to jj
 imap jj <Esc>
-inoremap {<cr> {<cr>}<esc>o
+inoremap {<CR> {<CR>}<Esc>O
 
 "Extra file
 set noundofile
@@ -58,6 +65,7 @@ colorscheme gruvbox
 
 "Append template to new C++ files
 autocmd BufNewFile *.cpp 0r ~/.vim/templates/skeleton.cpp
+autocmd BufNewFile *.c 0r ~/.vim/templates/skeleton.c
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -91,6 +99,7 @@ autocmd filetype cpp nnoremap <F5> :w <bar> Make <CR>
 autocmd filetype cpp nnoremap <F6> :vertical terminal ++shell ++cols=40 ./%:r<CR>
 autocmd filetype cpp nnoremap <F8> :!./%:r<CR>
 
+
 "CodeForces specific
 nnoremap <F9> :vertical terminal ++shell ++cols=40 cf test<CR>
 nnoremap <F12> :vertical terminal ++shell ++cols=40 cf submit<CR>
@@ -98,6 +107,8 @@ nnoremap <F12> :vertical terminal ++shell ++cols=40 cf submit<CR>
 "vim utility
 " :q with <F2>
 nnoremap <F2> :q <CR>
+"ctrl + t -> terminal
+nnoremap <c-t> :terminal <CR>
 
 "c++ highlighting
 let g:cpp_class_scope_highlight = 1
