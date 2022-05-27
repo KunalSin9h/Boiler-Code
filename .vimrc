@@ -78,7 +78,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'git://git.wincent.com/command-t.git'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 
-Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Valloric/YouCompleteMe'
 Plugin 'tpope/vim-dispatch'
 Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'SirVer/ultisnips'
@@ -86,11 +86,16 @@ Plugin 'honza/vim-snippets'
 Plugin 'bling/vim-bufferline' "show the list of buffers in the command bar
 Plugin 'delimitMate.vim' "completion for quotes, parens, brackets
 
+"https://www.youtube.com/watch?v=7-dfpQ5sexk
+"do it like this else just "yarn install" wont work
+"yarn install --ignore-engines
+Plugin 'neoclide/coc.nvim' "conquer of completion
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 
 "Disable new window popin when YouCompleteMe suggest something
-set completeopt-=preview
+"set completeopt-=preview
 
 "General shotcut for compiling and running
 " you need cp.sh in computer to work 
@@ -98,7 +103,6 @@ set makeprg=cp.sh\ %:r
 autocmd filetype cpp nnoremap <F5> :w <bar> Make <CR> 
 autocmd filetype cpp nnoremap <F6> :vertical terminal ++shell ++cols=40 ./%:r<CR>
 autocmd filetype cpp nnoremap <F8> :!./%:r<CR>
-
 
 "CodeForces specific
 nnoremap <F9> :vertical terminal ++shell ++cols=40 cf test<CR>
@@ -124,3 +128,14 @@ let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-k>"
 let g:UltiSnipsJumpBackwardTrigger="<c-h>"
 let g:UltiSnipsEditSplit="vertical"
+
+" use <tab> for trigger completion and navigate to the next complete item
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~ '\s'
+endfunction
+
+inoremap <silent><expr> <Tab>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<Tab>" :
+      \ coc#refresh()
