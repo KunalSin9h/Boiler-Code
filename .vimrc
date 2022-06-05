@@ -2,7 +2,10 @@
 set autoread                    " Auto reload file after external commandset relativenumber
 set binary                      " Enable binary support
 set number                      " Show line numbers
+set nornu                       " set no relativenumber
 set ttyfast                     " Fast terminal
+
+set foldmethod=syntax
 
 " Move between open buffers
 nnoremap <C-n> :bnext<CR>
@@ -24,7 +27,9 @@ set nowrap
 set incsearch
 set scrolloff=6
 set backspace=indent,eol,start
+
 set encoding=utf-8
+
 set nocompatible
 set belloff=all
 set signcolumn=number
@@ -77,18 +82,18 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'git://git.wincent.com/command-t.git'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-
+Plugin 'SirVer/ultisnips'
 "Plugin 'Valloric/YouCompleteMe'
 Plugin 'tpope/vim-dispatch'
 Plugin 'octol/vim-cpp-enhanced-highlight'
-Plugin 'SirVer/ultisnips'
+
 Plugin 'honza/vim-snippets'
 Plugin 'bling/vim-bufferline' "show the list of buffers in the command bar
 Plugin 'delimitMate.vim' "completion for quotes, parens, brackets
 
 "https://www.youtube.com/watch?v=7-dfpQ5sexk
 "do it like this else just "yarn install" wont work
-"yarn install --ignore-engines
+" "yarn install --ignore-engines" will work
 Plugin 'neoclide/coc.nvim' "conquer of completion
 
 call vundle#end()            " required
@@ -139,3 +144,4 @@ inoremap <silent><expr> <Tab>
       \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<Tab>" :
       \ coc#refresh()
+
