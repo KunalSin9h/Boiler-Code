@@ -47,6 +47,8 @@ let &t_EI = "\e[2 q"
 "Esc to jj
 imap jj <Esc>
 inoremap {<CR> {<CR>}<Esc>O
+"space to za for toggling folds
+nnoremap <Space> za 
 
 "Extra file
 set noundofile
