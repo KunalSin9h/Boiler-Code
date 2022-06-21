@@ -5,10 +5,11 @@ set number                      " Show line numbers
 set nornu                       " set no relativenumber
 set ttyfast                     " Fast terminal
 
-set foldmethod=syntax
+set foldmethod=syntax           "Fold every block of code everytime
 
 " Move between open buffers
-nnoremap <C-n> :bnext<CR>
+" if plugin is install
+nnoremap <C-n> :bnext<CR>       
 nnoremap <C-p> :bprev<CR>
 
 syntax on
@@ -85,13 +86,12 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'git://git.wincent.com/command-t.git'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'SirVer/ultisnips'
-"Plugin 'Valloric/YouCompleteMe'
 Plugin 'tpope/vim-dispatch'
 Plugin 'octol/vim-cpp-enhanced-highlight'
 
-Plugin 'honza/vim-snippets'
-Plugin 'bling/vim-bufferline' "show the list of buffers in the command bar
-Plugin 'delimitMate.vim' "completion for quotes, parens, brackets
+Plugin 'honza/vim-snippets'             "create snippets
+Plugin 'bling/vim-bufferline'           "show the list of buffers in the command bar
+Plugin 'delimitMate.vim'                "completion for quotes, parens, brackets
 
 "https://www.youtube.com/watch?v=7-dfpQ5sexk
 "do it like this else just "yarn install" wont work
@@ -130,7 +130,7 @@ let g:cpp_experimental_template_highlight = 1
 let g:cpp_concepts_highlight = 1
 let g:cpp_no_function_highlight = 1
 
-"trigger through shift
+"trigger through ctrl
 let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-k>"
 let g:UltiSnipsJumpBackwardTrigger="<c-h>"
