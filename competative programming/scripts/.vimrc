@@ -1,3 +1,10 @@
+"  ___  _|__| ____________   ____  
+"  \  \/ /  |/     \_  __ \_/ ___\ 
+"   \   /|  |  Y Y  \  | \/\  \___ 
+" /\ \_/ |__|__|_|  /__|    \___  >
+" \/              \/            \/ 
+
+
 "General Editor Setting
 set autoread                    " Auto reload file after external commandset relativenumber
 set binary                      " Enable binary support
@@ -5,11 +12,10 @@ set number                      " Show line numbers
 set nornu                       " set no relativenumber
 set ttyfast                     " Fast terminal
 
-set foldmethod=syntax           "Fold every block of code everytime
+set foldmethod=syntax
 
 " Move between open buffers
-" if plugin is install
-nnoremap <C-n> :bnext<CR>       
+nnoremap <C-n> :bnext<CR>
 nnoremap <C-p> :bprev<CR>
 
 syntax on
@@ -68,6 +74,7 @@ set background=dark
 "colorscheme solarized
 "colorscheme zenburn
 colorscheme gruvbox
+"colorscheme cobalt2
 "colorscheme onehalfdark
 "colorscheme onehalflight
 
@@ -86,12 +93,13 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'git://git.wincent.com/command-t.git'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'SirVer/ultisnips'
+"Plugin 'Valloric/YouCompleteMe'
 Plugin 'tpope/vim-dispatch'
 Plugin 'octol/vim-cpp-enhanced-highlight'
 
-Plugin 'honza/vim-snippets'             "create snippets
-Plugin 'bling/vim-bufferline'           "show the list of buffers in the command bar
-Plugin 'delimitMate.vim'                "completion for quotes, parens, brackets
+Plugin 'honza/vim-snippets'
+Plugin 'bling/vim-bufferline' "show the list of buffers in the command bar
+Plugin 'delimitMate.vim' "completion for quotes, parens, brackets
 
 "https://www.youtube.com/watch?v=7-dfpQ5sexk
 "do it like this else just "yarn install" wont work
@@ -106,7 +114,7 @@ filetype plugin indent on    " required
 
 "General shotcut for compiling and running
 " you need cp.sh in computer to work 
-set makeprg=cp.sh\ %:r
+set makeprg=cm.sh\ %:r
 autocmd filetype cpp nnoremap <F5> :w <bar> Make <CR> 
 autocmd filetype cpp nnoremap <F6> :vertical terminal ++shell ++cols=40 ./%:r<CR>
 autocmd filetype cpp nnoremap <F8> :!./%:r<CR>
@@ -130,7 +138,7 @@ let g:cpp_experimental_template_highlight = 1
 let g:cpp_concepts_highlight = 1
 let g:cpp_no_function_highlight = 1
 
-"trigger through ctrl
+"trigger through shift
 let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-k>"
 let g:UltiSnipsJumpBackwardTrigger="<c-h>"
@@ -146,4 +154,3 @@ inoremap <silent><expr> <Tab>
       \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<Tab>" :
       \ coc#refresh()
-
